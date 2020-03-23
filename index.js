@@ -19,7 +19,7 @@ class TemplateCachePlugin {
       preserveLineBreaks: false
     }
 
-    compiler.hooks.compilation.tap(
+    compiler.hooks.beforeRun.tap(
       'TemplateCachePlugin',
       (compilation) => {
         compilation.hooks.additionalAssets.tapAsync(
